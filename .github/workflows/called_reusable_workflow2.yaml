@@ -32,3 +32,4 @@ jobs:
           echo "fichero de out: $GITHUB_OUTPUT"
           cat $GITHUB_ENV
           cat $GITHUB_OUTPUT
+          echo ${{ inputs.environment }}
