@@ -30,9 +30,11 @@ jobs:
           variableorigen: ${{ vars.VARIABLEREPOSITORIOORIGEN }}
         working-directory: directorio
         run: |
-          echo "fichero de env: $GITHUB_ENV"
-          echo "fichero de out: $GITHUB_OUTPUT"
+          echo "variable2=valorvariable2" >> "$GITHUB_ENV"
           cat $GITHUB_ENV
-          cat $GITHUB_OUTPUT
           echo ${{ inputs.environment }}
           echo ${{ vars.VARIABLEREPOSITORIOORIGEN }}
+      - name: Nombre step 4 RW2
+        id: step14RW2
+        run: echo
+        
