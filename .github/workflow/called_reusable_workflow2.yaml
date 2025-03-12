@@ -1,0 +1,34 @@
+name: Called reusable workflow 2
+run-name: Nombre de la ejecucion del Called reusable workflow 2
+
+on:
+  workflow_call:
+
+jobs:
+  job1:
+    name: Nombre job 1 RW2
+    runs-on: ubuntu-latest        
+    steps:
+      - name: Nombre step 1 RW2
+        id: step11RW2
+        uses: actions/checkout@v4
+      - name: Nombre step 2 RW2
+        id: step12RW2
+        working-directory: directorio
+        run: |
+          ls -lrt
+          echo "variable1=valorvariable1" >> "$GITHUB_ENV"
+          echo "output1=valoroutput1" >> "$GITHUB_OUTPUT" 
+          env
+          echo "fichero de env: $GITHUB_ENV"
+          echo "fichero de out: $GITHUB_OUTPUT"
+          cat $GITHUB_ENV
+          cat $GITHUB_OUTPUT
+      - name: Nombre step 3 RW2
+        id: step13RW2
+        working-directory: directorio
+        run: |
+          echo "fichero de env: $GITHUB_ENV"
+          echo "fichero de out: $GITHUB_OUTPUT"
+          cat $GITHUB_ENV
+          cat $GITHUB_OUTPUT
