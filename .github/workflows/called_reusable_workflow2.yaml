@@ -33,3 +33,4 @@ jobs:
           cat $GITHUB_ENV
           cat $GITHUB_OUTPUT
           echo ${{ inputs.environment }}
+          echo ${{ vars.VARIABLEREPOSITORIOORIGEN }}
