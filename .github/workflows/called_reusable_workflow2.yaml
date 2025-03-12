@@ -26,6 +26,8 @@ jobs:
           cat $GITHUB_OUTPUT
       - name: Nombre step 3 RW2
         id: step13RW2
+        env: 
+          variableorigen: ${{ vars.VARIABLEREPOSITORIOORIGEN }}
         working-directory: directorio
         run: |
           echo "fichero de env: $GITHUB_ENV"
